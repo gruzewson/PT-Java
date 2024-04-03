@@ -29,6 +29,7 @@ public class Main {
             System.out.print("Enter '3' to delete Mage\n");
             System.out.print("Enter '4' to delete Tower\n");
             System.out.print("Enter '5' to print everything\n");
+            System.out.print("Enter '6' to print queries\n");
             System.out.print("Enter 'x' to end program\n");
             System.out.print("Enter command: ");
             input = scanner.nextLine();
@@ -69,15 +70,19 @@ public class Main {
                 case "5":
                     manager.print();
                     break;
+                case "6":
+                    System.out.println("");
+                    manager.queryMagesBiggerLevelThan(18);
+                    System.out.println("");
+                    manager.queryTowerSmallerThan(30);
+                    System.out.println("");
+                    manager.queryMageLevelBiggerThanFromTower(20, "Eiffel");
+                    System.out.println("");
+                    break;
             }
 
         }
-        System.out.println("");
-        manager.queryMagesBiggerLevelThan(18);
-        System.out.println("");
-        manager.queryTowerSmallerThan(30);
-        System.out.println("");
-        manager.queryMageLevelBiggerThanFromTower(20, "Eiffel");
+
         manager.close();
     }
 
